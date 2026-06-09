@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buzbo — Meaningful Professional Connections</title>
+  <meta name="description" content="We believe professional opportunities come from genuine conversations, not endless scrolling, cold outreach, or collecting contacts. Join Buzbo.">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GOOGLE ANALYTICS (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYE9XZTPJR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Initialize GA4
+    gtag('config', 'G-ZYE9XZTPJR');
+  </script>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Header with Big Logo on the Left Corner -->
+    <header>
+      <div class="logo-container">
+        <a href="#" class="logo" id="header-logo">
+          <img src="buzbo_namelogo_cream.png" alt="Buzbo Logo" />
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Left Column -->
+      <section class="left-col">
+        <!-- Heading with Inline Cream Logo -->
+        <h1 class="hero-title" id="hero-main-title">
+          You found a <img src="buzbo_name_cream 2.png" alt="BUZBO" class="title-logo" /><br />Connection Card
+        </h1>
+
+        <!-- Copy -->
+        <p class="main-text">
+          We believe professional opportunities come from genuine conversations.
+        </p>
+
+        <!-- Mobile Hand Paper (Hidden on Desktop) -->
+        <div class="mobile-image-wrapper">
+          <img src="Hand paper v3.png" alt="Buzbo Connection Card" />
+        </div>
+
+        <!-- Call to Action Buttons -->
+        <div class="cta-container">
+          <a href="#" class="btn btn-solid" id="btn-read-more">LEARN MORE</a>
+          <a href="#" class="btn btn-outline" id="btn-waitlist">JOIN WAITLIST</a>
+          <a href="https://www.instagram.com/joinbuzbo/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-follow" id="btn-follow">
+            <!-- SVG Instagram Icon -->
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            FOLLOW
+          </a>
+        </div>
+      </section>
+
+      <!-- Right Column (Desktop Hand Card) -->
+      <section class="right-col">
+        <div class="right-image-wrapper">
+          <img src="Hand paper v3.png" alt="Buzbo Hand illustration" />
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Modal: Read More -->
+  <div class="modal-overlay" id="modal-read-more">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="read-more-content">
+        <h3 class="modal-title">Tonight's challenge is simple:</h3>
+        
+        <ul class="challenge-list">
+          <li>Start one conversation.</li>
+          <li>Learn one story.</li>
+          <li>Make one real connection.</li>
+        </ul>
+        
+        <p class="philosophy-quote">That's how networks are built.</p>
+        
+        <p class="philosophy-text">
+          Join Buzbo and meet ambitious people through experiences designed for meaningful professional connection.
+        </p>
+
+        <!-- CTA Buttons inside Learn More Modal (stacked) -->
+        <div class="modal-cta-container">
+          <button class="btn btn-solid" id="modal-btn-waitlist">JOIN THE WAITLIST</button>
+          <a href="https://www.instagram.com/joinbuzbo/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-follow" id="modal-btn-follow">
+            <!-- SVG Instagram Icon -->
+            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            FOLLOW OUR JOURNEY
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Waitlist -->
+  <div class="modal-overlay" id="modal-waitlist">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="waitlist-content">
+        <h3>Join the Waitlist</h3>
+        <p class="subtitle">Enter your details below to get invited to the next Buzbo experience.</p>
+        
+        <!-- Formspree Form Integration -->
+        <form id="waitlist-form">
+          <div class="form-group">
+            <label for="waitlist-name">Name</label>
+            <input type="text" id="waitlist-name" name="name" class="form-control" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="waitlist-email">Email Address</label>
+            <input type="email" id="waitlist-email" name="email" class="form-control" placeholder="your@email.com" required />
+          </div>
+          
+          <button type="submit" class="btn btn-submit">
+            <span class="btn-text">SUBMIT</span>
+          </button>
+
+          <!-- Form Status Messages -->
+          <div class="form-status success" id="status-success">
+            Thank you! You've been added to our waitlist.
+          </div>
+          <div class="form-status error" id="status-error">
+            Oops! Something went wrong. Please try again.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Behavior File -->
+  <script src="app.js"></script>
+</body>
+</html>
