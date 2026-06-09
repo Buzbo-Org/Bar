@@ -11,8 +11,7 @@ html {
 
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* Infinitely sharp CSS spotlight gradient centered on the background */
-  background: radial-gradient(circle at 60% 45%, #7e1e1d 0%, #641514 60%, #460b0a 100%);
+  background-color: #641514; /* Solid burgundy background globally */
   color: #ffffff;
   height: 100vh;
   display: flex;
@@ -20,6 +19,13 @@ body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Apply radial gradient ONLY on desktop viewports */
+@media (min-width: 769px) {
+  body {
+    background: radial-gradient(circle at 60% 45%, #7e1e1d 0%, #641514 60%, #460b0a 100%);
+  }
 }
 
 /* Mobile-only line break helper */
@@ -562,7 +568,7 @@ header {
   }
 
   .hero-title {
-    font-size: clamp(2.6rem, 9.5vw, 3.8rem); /* Even larger text on mobile */
+    font-size: clamp(3rem, 11vw, 4.4rem); /* Super large text on mobile */
     margin-bottom: 1rem;
     line-height: 1.05;
   }
