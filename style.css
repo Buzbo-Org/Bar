@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+html {
+  background-color: #641514; /* Default solid fallback color to eliminate multi-color splits */
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* Infinitely sharp CSS spotlight gradient centered on the background */
@@ -16,6 +20,11 @@ body {
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile-only line break helper */
+.mobile-only-br {
+  display: none;
 }
 
 /* Typography & Links */
@@ -517,13 +526,18 @@ header {
 }
 
 @media (max-width: 768px) {
-  body {
+  html, body {
     height: auto;
     overflow-y: auto;
+    background: #641514 !important; /* Forces solid background for both html and body, eliminating lines */
   }
 
   .desktop-only {
     display: none;
+  }
+
+  .mobile-only-br {
+    display: inline; /* Shows break before logo on mobile */
   }
 
   header {
@@ -548,13 +562,14 @@ header {
   }
 
   .hero-title {
-    font-size: clamp(2rem, 6.5vw, 2.8rem);
+    font-size: clamp(2.6rem, 9.5vw, 3.8rem); /* Even larger text on mobile */
     margin-bottom: 1rem;
+    line-height: 1.05;
   }
 
   .main-text {
-    font-size: 1.15rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem; /* Pushes the hand closer to the text */
     max-width: 100%;
   }
 
@@ -563,7 +578,7 @@ header {
     display: block;
     width: 100%;
     max-width: 380px;
-    margin: 1.5rem auto 2.5rem auto; /* Centered horizontally on mobile */
+    margin: 0.5rem auto 1.5rem auto; /* Center and tighten vertical gap */
   }
   
   .mobile-image-wrapper img {
